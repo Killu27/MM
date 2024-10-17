@@ -9,7 +9,7 @@ namespace App\Http\Controllers;
    {
        public function index()
        {
-           $products = Product::all();
-           return view('products.index', compact('products'));
+           $products = Product::all();  //получает данные из бд
+           return view('products.index', compact('products')); //передает полученные данные в представление products
        }
    }
