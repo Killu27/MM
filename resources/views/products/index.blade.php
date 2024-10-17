@@ -8,7 +8,7 @@
 <body>
     <h1>Products</h1>
     <ul>
-        @foreach ($products as $product)
+        @foreach ($products as $product)  //получает переменную products из ProductController
             <li>
                 <strong>{{ $product->name }}</strong><br>
                 {{ $product->description }}<br>
