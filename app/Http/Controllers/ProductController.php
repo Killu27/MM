@@ -13,6 +13,7 @@ namespace App\Http\Controllers;
 
    class ProductController extends Controller
    {
+<<<<<<< HEAD
     public function show($id)
     {
         $product = Product::findOrFail($id);
@@ -46,4 +47,11 @@ namespace App\Http\Controllers;
         $products = Product::all(); // Получение всех продуктов
         return view('products.index', compact('products')); // Возврат представления с продуктами
     }
+=======
+       public function index()
+       {
+           $products = Product::all();  //получает данные из бд
+           return view('products.index', compact('products')); //передает полученные данные в представление products
+       }
+>>>>>>> 1173d9dcbf958755acda6c919a9cd5b3a5ce95ea
    }
