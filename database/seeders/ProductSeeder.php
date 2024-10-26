@@ -9,7 +9,7 @@ use App\Models\Product;
 class ProductSeeder extends Seeder
 {
     
-    public function run(): void
+    public function run()
     {
         Product::create([
             'name' => 'Orange',

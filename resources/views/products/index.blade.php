@@ -9,12 +9,15 @@
     <h1>Products</h1>
     <ul>
         @foreach ($products as $product)
-            <li>
-                <strong>{{ $product->name }}</strong><br>
-                {{ $product->description }}<br>
-                Price: ${{ $product->price }}
-            </li>
-        @endforeach
+    <li>
+        <div class="card">
+            <h5 class="card-title">{{ $product->name }}</h5>
+            <p class="card-text">{{ $product->description }}</p>
+
+            <a href="{{ route('products.show', $product->id) }}" class="btn btn-primary">Посмотреть товар</a>
+        </div>
+    </li>
+@endforeach
     </ul>
 </body>
 </html>
